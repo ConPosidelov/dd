@@ -1,0 +1,399 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+$titleTable_borderColor: #ADD8E6;
+$bodyTable_borderColor: #D3D3D3;
+$profilesTabsBGColor: #FAFAD2;
+$progressTabsBGColor: #E0FFFF;
+$collectedDataTabsBGColor: #FFF5EE;
+$chroniclesTabsBGColor: #F0FFF0;
+
+.home {
+  margin-top: 10px;
+  width: 1200px;
+  .nav {
+    li{
+      a{
+        padding: 5px;
+        padding-left: 50px;
+        padding-right: 50px;
+        //text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  #homeTab-tab-1 {
+    background-color: $profilesTabsBGColor;
+  }
+  #homeTab-tab-2 {
+    background-color: $progressTabsBGColor;
+  }
+  #homeTab-tab-3 {
+    background-color: $collectedDataTabsBGColor;
+  }
+  #homeTab-tab-4 {
+    background-color: $chroniclesTabsBGColor;
+  }
+
+  //-------query profiles---------------------
+
+  .query_profiles {
+    background-color: $profilesTabsBGColor;
+    min-height: 300px;
+    padding: 10px;
+
+    .query_profiles_spinner{
+       top: 80px;
+       left: 45%;
+    } 
+    .title  {
+     height: 40px;
+      button {
+        float: right;
+        margin-right: 20px;
+      }
+
+      .query_profiles_msg{
+        float: left;
+        margin-left: 10px;
+        margin-top: 5px;
+        height: 30px;
+      }
+    }
+
+    .query_panel {
+
+      display: block;
+      &.hide {
+        display: none;
+      }
+      .query_panel_title {
+        width: 100%;
+        height: 60px;
+        border-top: solid 1px $titleTable_borderColor;
+        border-bottom: solid 1px $titleTable_borderColor;
+        .title_cell {
+          height: 60px;
+          float: left;
+          padding: 5px;
+          border-right: solid 1px $titleTable_borderColor;
+          text-overflow: ellipsis;
+          white-space: nowrap; 
+          overflow: hidden;
+
+          &:nth-child(1) {
+            width: 3%;
+            border-left: solid 1px $titleTable_borderColor;
+          }
+          &:nth-child(2) {
+            width: 30%;
+          }
+          &:nth-child(3) {
+            width: 20%;
+          }
+          &:nth-child(4) {
+            width: 7%;
+          }
+          &:nth-child(5) {
+            width: 7%;
+          }
+          &:nth-child(6) {
+            width: 19%;
+          }
+          &:nth-child(7) {
+            width: 7%;
+          }
+          &:nth-child(8) {
+            width: 7%;
+          }
+        }
+        .query_title_params{
+          height: 60px;
+          width: 7%;
+          float: left;
+          padding: 5px;
+          border-right: solid 1px $titleTable_borderColor;
+          white-space: pre-line;
+        }
+      }
+
+      .query_panel_body_row {
+        width: 100%;
+        height: 80px;
+        border-top: solid 1px $bodyTable_borderColor;
+        .query_cell {
+          height: 60px;
+          float: left;
+          padding: 5px;
+          border-right: solid 1px $bodyTable_borderColor;
+          border-bottom: solid 1px $bodyTable_borderColor;
+          text-overflow: ellipsis;
+          white-space: nowrap; 
+          overflow: hidden;
+          cursor: pointer;
+
+          .query_row_name {
+            width: 100%; 
+            padding-left: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap; 
+            overflow: hidden;
+
+
+            button {
+              float: left;
+              margin-left: 10px;
+              margin-top: 5px;
+              &:nth-child(1){
+                margin-left: 0;
+              }
+            }
+
+
+          }
+
+          .run_spinner {
+              margin-left: 100px;
+            }
+
+
+          &:nth-child(1) {
+            width: 3%;
+            border-left: solid 1px $bodyTable_borderColor;
+         
+          }
+          &:nth-child(2) {
+            width: 30%;
+          }
+          &:nth-child(3) {
+            width: 20%;
+            font-size: 12px;
+          }
+          &:nth-child(4) {
+            width: 7%;
+          }
+          &:nth-child(5) {
+            width: 7%;
+            
+          }
+          &:nth-child(6) {
+            width: 19%;
+          }
+          &:nth-child(7) {
+            width: 7%;
+          }
+          &:nth-child(8) {
+            width: 7%;
+            button{
+              margin-top: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    //-------form profiles---------------------
+
+    .form_profiles_btns {
+      .form_profiles_msg{
+        float: left;
+        margin-left: 10%;
+        margin-top: 5px;
+        height: 30px;
+      }
+      button {
+        margin-top: 5px;
+        &:nth-child(1){
+          float: left;
+        }
+        &:nth-child(3){
+          float: right;
+        }
+      }
+    }
+
+  }
+  
+  // --- Progress ------------------------
+  .progress_mode_menu{
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+    button {
+      margin-right: 10px;
+    }
+  }
+  .progress_1 {
+    background-color: $progressTabsBGColor;
+    min-height: 300px;
+    padding: 20px;
+    border: none;
+
+    .progress_spinner{
+       top: 80px;
+       left: 45%;
+    }
+
+    .progress_body {
+      margin-top: 5px;
+      width: 100%;
+      .progress_data{
+        //margin-top: 5px;
+         width: 100%;
+         height: 30px; 
+        .progress_data_title{
+            float: left;
+            font-size: 20px;
+
+        }
+        .progress_data_body{
+            float: right;
+            margin-right: 0px;
+            font-size: 16px;
+          button{
+            float: left;
+            margin-left: 20px;
+          }
+          &.currentStatus {
+            margin-right: 50%;
+          } 
+        }
+
+        .current_url {
+          float: left;
+          margin-left: 10px;
+          font-size: 14px;
+        }
+        
+        button{
+          float: right;
+          margin-left: 60px;
+        }
+      }  
+      .progress_article_title {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: solid 1px #DCDCDC;
+      }
+    }
+  }
+
+  // --- Collected Data ------------------------
+
+  .collected_data {
+    background-color: $collectedDataTabsBGColor;
+    height: 1300px;
+    padding: 20px;
+    border: none;
+    overflow: hidden;
+
+    .collected_data_body{
+      position: relative;
+      .collected_data_controls{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        z-index: 999;
+        .btn-group {
+          float: right;
+        }
+        .collected_data_sourse_title{
+          float: left;
+        }
+        .collected_data_sourse_btn {
+          float: right;
+          margin-right: 10px;
+          margin-top: -10px;
+        }
+      }
+
+      .collected_data_sourse_menu {
+        position: absolute;
+        top: 30px;
+        right: -320px;
+        z-index: 100;
+
+        min-height: 200px;
+        width: 300px;
+
+        padding-top: 15px;
+
+        border-radius: 8px ;
+        background-color: $chroniclesTabsBGColor;
+        transition: right 0.6s;
+
+        overflow: hidden;
+        
+        &.open {
+          right: -20px;
+          .sourse_menu_item {
+            
+          }
+          .sourse_menu_close{
+           
+          }
+        }
+
+        .sourse_menu_item {
+          width: 100%;
+          height: 35px;
+          padding-top: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+          overflow: hidden;
+        }
+        .sourse_menu_body{
+          float: left;
+          width: 250px;
+          height: 30px;
+          cursor: pointer;
+          font-weight: 300;
+          font-size: 14px;
+          &:hover {
+            
+            font-weight: 600;
+            //transform: scale(1.2);
+            font-size: 15px;
+          }
+        }
+        .sourse_menu_close{
+          float: right;
+          margin-top: -5px;
+          padding-left: 7px;
+          padding-right: 7px;
+          border-radius: 50%;
+          border: 1px solid #778899;
+          cursor: pointer;
+          &:hover {
+            background-color: #EECBAD;
+            font-weight: 600;
+        
+          }
+        }
+      }
+      
+      .collected_data_tabs {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        min-height: 100px;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
